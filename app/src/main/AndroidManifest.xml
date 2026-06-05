@@ -12,16 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrudApp">
         <activity
-            android:name=".ui.servicios.ServiciosActivity"
-            android:exported="false" />
+            android:name=".ui.clientes.ClienteDetalleActivity"/>
         <activity
-            android:name=".ui.clientes.DetalleClienteActivity"
-            android:exported="false" />
+            android:name=".ui.clientes.ClientesActivity" />
         <activity
-            android:name=".ui.clientes.ClientesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.dashboard.DashboardActivity"
+            android:name=".ui.dashboard.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
