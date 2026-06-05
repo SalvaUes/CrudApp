@@ -77,28 +77,41 @@ public class ClienteAdapter extends RecyclerView.Adapter<ClienteAdapter.ViewHold
 
                 if(item.getTitle().equals("Eliminar")){
 
-                    new AlertDialog.Builder(context)
-                            .setTitle("Eliminar Cliente")
-                            .setMessage("¿Desea eliminar este cliente?")
-                            .setPositiveButton("Sí",(dialog,which)->{
+                    // Antes de eliminar, verificar si el cliente tiene servicios asociados
+                    int servicios = AppDatabase.getDatabase(context)
+                            .servicioDao()
+                            .contarPorCliente(clienteEntity.id);
 
-                                AppDatabase.getDatabase(context)
-                                        .clienteDao()
-                                        .eliminar(clienteEntity);
+                    if(servicios > 0){
+                        new AlertDialog.Builder(context)
+                                .setTitle("Eliminar Cliente")
+                                .setMessage("No se puede eliminar el cliente porque tiene servicios asociados.")
+                                .setPositiveButton("Aceptar", null)
+                                .show();
+                    }else{
+                        new AlertDialog.Builder(context)
+                                .setTitle("Eliminar Cliente")
+                                .setMessage("¿Desea eliminar este cliente?")
+                                .setPositiveButton("Sí",(dialog,which)->{
 
-                                Toast.makeText(
-                                        context,
-                                        "Cliente eliminado correctamente",
-                                        Toast.LENGTH_SHORT
-                                ).show();
+                                    AppDatabase.getDatabase(context)
+                                            .clienteDao()
+                                            .eliminar(clienteEntity);
 
-                                if(context instanceof ClientesActivity){
-                                    ((ClientesActivity) context).cargarClientes();
-                                }
+                                    Toast.makeText(
+                                            context,
+                                            "Cliente eliminado correctamente",
+                                            Toast.LENGTH_SHORT
+                                    ).show();
 
-                            })
-                            .setNegativeButton("Cancelar",null)
-                            .show();
+                                    if(context instanceof ClientesActivity){
+                                        ((ClientesActivity) context).cargarClientes();
+                                    }
+
+                                })
+                                .setNegativeButton("Cancelar",null)
+                                .show();
+                    }
                 }
 
                 return true;

@@ -20,7 +20,7 @@ import sv.edu.ues.vl23003.crudapp.R;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
 import sv.edu.ues.vl23003.crudapp.ui.adapter.ClienteAdapter;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
-import sv.edu.ues.vl23003.crudapp.ui.dashboard.MainActivity;
+import sv.edu.ues.vl23003.crudapp.ui.dashboard.DashboardActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -82,7 +82,7 @@ public class ClientesActivity extends AppCompatActivity {
             if(item.getItemId() == R.id.nav_home){
 
                 startActivity(
-                        new Intent(this, MainActivity.class));
+                        new Intent(this, DashboardActivity.class));
 
                 finish();
 
@@ -114,7 +114,7 @@ public class ClientesActivity extends AppCompatActivity {
 
             Intent intent =
                     new Intent(ClientesActivity.this,
-                            MainActivity.class);
+                            DashboardActivity.class);
 
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
