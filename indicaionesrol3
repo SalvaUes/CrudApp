@@ -1,0 +1,17 @@
+[10:31, 7/6/2026] +503 7613 0732: Si esa. Veo que el PR qué subíste, fué con la estructura base, quizá clonaste a main en lugar de dev ?
+[10:42, 7/6/2026] YHVH: Si no vi el dev
+[10:42, 7/6/2026] YHVH: Hasta ahorita
+[10:46, 7/6/2026] +503 7613 0732: Si, esto es lo que pasa.
+
+Debido a que trabajaste con main y no con dev, escribiste código en archivos que ya están funcional en dev.
+
+Eso genera conflicto al hacer la integración.
+[10:50, 7/6/2026] +503 7613 0732: Lo que necesito que hagas es que actualices tu rama local con el código actualizado en de la rama dev.
+
+Entonces vas a ver todos los conflictos que da el código que subiste.
+
+Corrgis esos conflictos y luego subis esos cambios
+[10:51, 7/6/2026] +503 7613 0732: Me avisas xfa
+
+
+https://github.com/SalvaUes/CrudApp/tree/dev#
