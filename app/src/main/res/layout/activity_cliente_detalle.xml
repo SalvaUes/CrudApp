@@ -135,6 +135,34 @@
                 android:textSize="18sp"
                 android:paddingBottom="20dp"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:text="Editar"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:text="Eliminar"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
