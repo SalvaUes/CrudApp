@@ -47,7 +47,7 @@
         android:layout_below="@id/toolbar"
         android:layout_margin="12dp"
         android:background="@color/card"
-        android:hint="Buscar clienteEntity..."
+        android:hint="Buscar cliente..."
         android:padding="12dp"
         android:textColor="@color/white"
         android:textColorHint="@color/gray"/>
