@@ -1,13 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.CrudApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/oxford_dark</item>
+        <item name="colorPrimaryVariant">#090D14</item>
+        <item name="colorOnPrimary">@color/premium_card_light</item>
 
-    <style name="Base.Theme.CrudApp"
-        parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/premium_bg_light</item>
+        <item name="colorSurface">@color/premium_card_light</item>
+        <item name="colorOnSurface">@color/premium_text_light</item>
 
-        <item name="android:statusBarColor">#000000</item>
-
+        <item name="colorSecondary">@color/gold_premium</item>
     </style>
-
-    <style name="Theme.CrudApp"
-        parent="Base.Theme.CrudApp" />
-
 </resources>

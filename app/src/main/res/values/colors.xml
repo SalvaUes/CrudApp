@@ -1,10 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="primary">#1DA1F2</color>
-    <color name="secondary">#0B132B</color>
-    <color name="card">#1C2541</color>
-    <color name="white">#FFFFFF</color>
-    <color name="green">#00E676</color>
-    <color name="gray">#A0A0A0</color>
-
+    <color name="primary">#111827</color>          <color name="primary_dark">#111827</color>     <color name="primary_accent">#374151</color>   <color name="secondary">#C5A880</color>        <color name="card">#FFFFFF</color>             <color name="white">#FFFFFF</color>            <color name="gray">#9CA3AF</color>             <color name="oxford_dark">#111827</color>
+    <color name="slate_gray">#374151</color>
+    <color name="cool_gray">#9CA3AF</color>
+    <color name="gold_premium">#C5A880</color>
+    <color name="gold_light">#E5D4BC</color>
+    <color name="premium_bg_light">#F9FAFB</color>   <color name="premium_card_light">#FFFFFF</color>
+    <color name="premium_text_light">#1F2937</color>
+    <color name="premium_bg_dark">#0B0F19</color>    <color name="premium_card_dark">#161F30</color>
+    <color name="premium_text_dark">#F3F4F6</color>
 </resources>
