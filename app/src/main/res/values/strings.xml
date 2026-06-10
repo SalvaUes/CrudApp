@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CrudApp</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_clientes">Clientes</string>
+    <string name="menu_servicios">Servicios</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_clientes">Clientes</string>
+    <string name="dashboard_servicios">Servicios</string>
+    <string name="dashboard_monto_total">Monto Total</string>
 </resources>

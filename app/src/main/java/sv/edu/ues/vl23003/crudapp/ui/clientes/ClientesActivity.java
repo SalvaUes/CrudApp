@@ -21,6 +21,7 @@ import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
 import sv.edu.ues.vl23003.crudapp.ui.adapter.ClienteAdapter;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
 import sv.edu.ues.vl23003.crudapp.ui.dashboard.DashboardActivity;
+import sv.edu.ues.vl23003.crudapp.ui.servicios.ServiciosActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -83,6 +84,16 @@ public class ClientesActivity extends AppCompatActivity {
 
                 startActivity(
                         new Intent(this, DashboardActivity.class));
+
+                finish();
+
+                return true;
+            }
+
+            if(item.getItemId() == R.id.nav_servicios){
+
+                startActivity(
+                        new Intent(this, ServiciosActivity.class));
 
                 finish();
 

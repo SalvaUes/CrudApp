@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.SimpleDateFormat;
@@ -26,6 +27,7 @@ import sv.edu.ues.vl23003.crudapp.R;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
+import sv.edu.ues.vl23003.crudapp.ui.clientes.ClientesActivity;
 import sv.edu.ues.vl23003.crudapp.ui.dashboard.DashboardActivity;
 import sv.edu.ues.vl23003.crudapp.utils.Constantes;
 
@@ -51,6 +53,26 @@ public class ServiciosActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(v -> {
             startActivity(new Intent(this, DashboardActivity.class));
             finish();
+        });
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        bottomNavigation.setSelectedItemId(R.id.nav_servicios);
+
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_servicios) {
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_home) {
+                startActivity(new Intent(this, DashboardActivity.class));
+                finish();
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_clientes) {
+                startActivity(new Intent(this, ClientesActivity.class));
+                finish();
+                return true;
+            }
+            return false;
         });
 
         recyclerView = findViewById(R.id.recycler_servicios);
