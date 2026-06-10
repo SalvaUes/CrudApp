@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#0B132B">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Cliente"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- NOMBRE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el nombre"/>
+
+        <!-- TELÉFONO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="TELÉFONO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el teléfono"/>
+
+        <!-- CORREO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CORREO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el correo"/>
+
+        <!-- DIRECCIÓN -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="DIRECCIÓN"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese la dirección"/>
+
+        <!-- MUNICIPIO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="MUNICIPIO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtMunicipio"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el municipio"/>
+
+        <!-- NOTAS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="NOTAS"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtNotas"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:gravity="top"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese observaciones"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:text="Guardar Cliente"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
