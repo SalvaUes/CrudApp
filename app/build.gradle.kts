@@ -4,9 +4,7 @@ plugins {
 
 android {
     namespace = "sv.edu.ues.vl23003.crudapp"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "sv.edu.ues.vl23003.crudapp"
