@@ -2,9 +2,11 @@ package sv.edu.ues.vl23003.crudapp.data.local.entity.database;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
@@ -12,7 +14,7 @@ import sv.edu.ues.vl23003.crudapp.data.local.entity.dao.ClienteDao;
 import sv.edu.ues.vl23003.crudapp.data.local.entity.dao.ServicioDao;
 
 
-@Database(entities = {ClienteEntity.class, ServicioEntity.class}, version = 2, exportSchema = false)// buena practica para evitar advertencias de Room si no esta exportando esquemas.
+@Database(entities = {ClienteEntity.class, ServicioEntity.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;
 
@@ -31,11 +33,19 @@ public abstract class AppDatabase extends RoomDatabase {
                             )
                             .fallbackToDestructiveMigration(true)
                             .allowMainThreadQueries()
-
+                            .addCallback(SEED_CALLBACK)
                             .build();
                 }
             }
         }
         return INSTANCE;
     }
+
+    private static final RoomDatabase.Callback SEED_CALLBACK = new RoomDatabase.Callback() {
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+            super.onCreate(db);
+            db.execSQL("INSERT INTO clientes (nombre, direccion, telefono) VALUES ('Juan Perez', 'San Salvador', '7777-1234')");
+        }
+    };
 }

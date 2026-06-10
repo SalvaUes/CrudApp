@@ -1,35 +1,81 @@
 package sv.edu.ues.vl23003.crudapp.data.local.entity;
 
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(
-        tableName = "servicios",
-        foreignKeys = @ForeignKey(
-                entity = ClienteEntity.class,
-                parentColumns = "id",
-                childColumns = "clienteId",
-                onDelete = ForeignKey.RESTRICT
-        )
-)
-
+@Entity(tableName = "servicios")
 public class ServicioEntity {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+    private int clienteId;
+    private String tipoServicio;
+    private String estado;
+    private double precio;
+    private String descripcion;
+    private String fecha;
 
-	@PrimaryKey(autoGenerate = true)
-	public int id;
+    public ServicioEntity(int clienteId, String tipoServicio, String estado, double precio, String descripcion, String fecha) {
+        this.clienteId = clienteId;
+        this.tipoServicio = tipoServicio;
+        this.estado = estado;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+    }
 
-	// FK hacia clientes.id
-	public int clienteId;
+    public int getId() {
+        return id;
+    }
 
-	public String tipo; // tipo de servicio
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String estado; // estado (En proceso, Finalizado, etc.)
+    public int getClienteId() {
+        return clienteId;
+    }
 
-	public String descripcion;
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
 
-	public double precio;
+    public String getTipoServicio() {
+        return tipoServicio;
+    }
 
-	public String fecha; // formato simple YYYY-MM-DD u otro
+    public void setTipoServicio(String tipoServicio) {
+        this.tipoServicio = tipoServicio;
+    }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 }
