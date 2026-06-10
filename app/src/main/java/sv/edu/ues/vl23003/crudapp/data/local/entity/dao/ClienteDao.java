@@ -3,6 +3,8 @@ package sv.edu.ues.vl23003.crudapp.data.local.entity.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
+import androidx.room.Delete;
 
 import java.util.List;
 
@@ -13,9 +15,27 @@ public interface ClienteDao {
     @Insert
     void insert(ClienteEntity cliente);
 
+    @Insert
+    void insertar(ClienteEntity cliente);
+
+    @Update
+    void actualizar(ClienteEntity cliente);
+
+    @Delete
+    void eliminar(ClienteEntity cliente);
+
     @Query("SELECT * FROM clientes")
     List<ClienteEntity> getAll();
 
+    @Query("SELECT * FROM clientes")
+    List<ClienteEntity> obtenerClientes();
+
     @Query("SELECT * FROM clientes WHERE id = :id")
     ClienteEntity getById(int id);
+
+    @Query("SELECT * FROM clientes WHERE id = :id")
+    ClienteEntity obtenerPorId(int id);
+
+    @Query("SELECT * FROM clientes WHERE nombre LIKE '%' || :texto || '%'")
+    List<ClienteEntity> buscarCliente(String texto);
 }

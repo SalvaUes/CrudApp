@@ -64,8 +64,8 @@ public class ServiciosActivity extends AppCompatActivity {
 
     private void cargarServicios() {
         new Thread(() -> {
-            servicios = db.servicioDao().obtenerServicios();
-            clientes = db.clienteDao().obtenerClientes();
+            servicios = db.servicioDao().getAll();
+            clientes = db.clienteDao().getAll();
             runOnUiThread(() -> {
                 ServicioAdapter adapter = new ServicioAdapter(servicios, clientes, this::eliminarServicio);
                 recyclerView.setAdapter(adapter);
@@ -75,7 +75,7 @@ public class ServiciosActivity extends AppCompatActivity {
 
     private void mostrarDialogoNuevoServicio() {
         new Thread(() -> {
-            List<ClienteEntity> clientesCargados = db.clienteDao().obtenerClientes();
+            List<ClienteEntity> clientesCargados = db.clienteDao().getAll();
 
             if (clientesCargados.isEmpty()) {
                 runOnUiThread(() ->
@@ -102,7 +102,7 @@ public class ServiciosActivity extends AppCompatActivity {
 
                 String[] nombresClientes = new String[clientesCargados.size()];
                 for (int i = 0; i < clientesCargados.size(); i++) {
-                    nombresClientes[i] = clientesCargados.get(i).nombre;
+                    nombresClientes[i] = clientesCargados.get(i).getNombre();
                 }
 
                 ArrayAdapter<String> adapterClientes = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, nombresClientes);
@@ -125,23 +125,17 @@ public class ServiciosActivity extends AppCompatActivity {
                     }
 
                     int selectedClienteIndex = spCliente.getSelectedItemPosition();
-                    int clienteId = clientesCargados.get(selectedClienteIndex).id;
+                    int clienteId = clientesCargados.get(selectedClienteIndex).getId();
                     String tipo = spTipo.getSelectedItem().toString();
                     String estado = spEstado.getSelectedItem().toString();
                     double precio = Double.parseDouble(precioStr);
                     String descripcion = etDescripcion.getText().toString().trim();
                     String fecha = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
 
-                    ServicioEntity servicio = new ServicioEntity();
-                    servicio.clienteId = clienteId;
-                    servicio.tipo = tipo;
-                    servicio.estado = estado;
-                    servicio.precio = precio;
-                    servicio.descripcion = descripcion;
-                    servicio.fecha = fecha;
+                    ServicioEntity servicio = new ServicioEntity(clienteId, tipo, estado, precio, descripcion, fecha);
 
                     new Thread(() -> {
-                        db.servicioDao().insertar(servicio);
+                        db.servicioDao().insert(servicio);
                         runOnUiThread(() -> {
                             cargarServicios();
                             dialog.dismiss();
@@ -154,12 +148,12 @@ public class ServiciosActivity extends AppCompatActivity {
     }
 
     private void eliminarServicio(ServicioEntity servicio) {
-        if (servicio.estado.equals("En proceso")) {
+        if (servicio.getEstado().equals("En proceso")) {
             Toast.makeText(this, "No se puede eliminar un servicio en proceso", Toast.LENGTH_SHORT).show();
             return;
         }
         new Thread(() -> {
-            db.servicioDao().eliminar(servicio);
+            db.servicioDao().delete(servicio);
             runOnUiThread(() -> {
                 cargarServicios();
                 Toast.makeText(this, "Servicio eliminado", Toast.LENGTH_SHORT).show();

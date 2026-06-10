@@ -6,10 +6,15 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "clientes")
 public class ClienteEntity {
     @PrimaryKey(autoGenerate = true)
-    private int id;
-    private String nombre;
-    private String direccion;
-    private String telefono;
+    public int id;
+    public String nombre;
+    public String telefono;
+    public String email;
+    public String direccion;
+    public String municipio;
+    public String notas;
+
+    public ClienteEntity() {}
 
     public ClienteEntity(String nombre, String direccion, String telefono) {
         this.nombre = nombre;
@@ -21,31 +26,7 @@ public class ClienteEntity {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 }

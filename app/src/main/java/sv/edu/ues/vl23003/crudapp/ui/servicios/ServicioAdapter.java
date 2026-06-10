@@ -44,18 +44,18 @@ public class ServicioAdapter extends RecyclerView.Adapter<ServicioAdapter.ViewHo
 
         String nombreCliente = "";
         for (ClienteEntity c : clientes) {
-            if (c.id == servicio.clienteId) {
-                nombreCliente = c.nombre;
+            if (c.getId() == servicio.getClienteId()) {
+                nombreCliente = c.getNombre();
                 break;
             }
         }
 
         holder.tvCliente.setText("Cliente: " + nombreCliente);
-        holder.tvTipo.setText("Tipo: " + servicio.tipo);
-        holder.tvEstado.setText("Estado: " + servicio.estado);
-        holder.tvPrecio.setText("Precio: $" + String.format("%.2f", servicio.precio));
-        holder.tvDescripcion.setText(servicio.descripcion);
-        holder.tvFecha.setText("Fecha: " + servicio.fecha);
+        holder.tvTipo.setText("Tipo: " + servicio.getTipoServicio());
+        holder.tvEstado.setText("Estado: " + servicio.getEstado());
+        holder.tvPrecio.setText("Precio: $" + String.format("%.2f", servicio.getPrecio()));
+        holder.tvDescripcion.setText(servicio.getDescripcion());
+        holder.tvFecha.setText("Fecha: " + servicio.getFecha());
 
         holder.btnEliminar.setOnClickListener(v -> onDeleteClickListener.onDeleteClick(servicio));
     }
