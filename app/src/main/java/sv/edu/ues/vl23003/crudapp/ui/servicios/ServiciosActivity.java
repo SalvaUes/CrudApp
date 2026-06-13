@@ -127,16 +127,17 @@ public class ServiciosActivity extends AppCompatActivity {
                     nombresClientes[i] = clientesCargados.get(i).getNombre();
                 }
 
-                ArrayAdapter<String> adapterClientes = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, nombresClientes);
-                adapterClientes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                ArrayAdapter<String> adapterClientes = new ArrayAdapter<>(this, R.layout.item_spinner, nombresClientes);
+                adapterClientes.setDropDownViewResource(R.layout.item_spinner);
                 spCliente.setAdapter(adapterClientes);
 
-                ArrayAdapter<String> adapterTipos = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Constantes.TIPOS_SERVICIO);
-                adapterTipos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter<String> adapterTipos = new ArrayAdapter<>(this, R.layout.item_spinner, Constantes.TIPOS_SERVICIO);
+                adapterTipos.setDropDownViewResource(R.layout.item_spinner);
                 spTipo.setAdapter(adapterTipos);
 
-                ArrayAdapter<String> adapterEstados = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Constantes.ESTADOS);
-                adapterEstados.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter<String> adapterEstados = new ArrayAdapter<>(this, R.layout.item_spinner, Constantes.ESTADOS);
+                adapterEstados.setDropDownViewResource(R.layout.item_spinner);
                 spEstado.setAdapter(adapterEstados);
 
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {

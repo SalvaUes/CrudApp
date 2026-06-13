@@ -1,0 +1,3112 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+app/.gitignore
+app/build.gradle.kts
+app/proguard-rules.pro
+app/src/androidTest/java/sv/edu/ues/vl23003/crudapp/ExampleInstrumentedTest.java
+app/src/main/AndroidManifest.xml
+app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/ClienteEntity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/dao/ClienteDao.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/dao/ServicioDao.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/database/AppDatabase.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/ServicioEntity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/adapter/ClienteAdapter.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/clientes/ClienteDetalleActivity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/clientes/ClientesActivity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/dashboard/DashboardActivity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/servicios/ServicioAdapter.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/servicios/ServiciosActivity.java
+app/src/main/java/sv/edu/ues/vl23003/crudapp/utils/Constantes.java
+app/src/main/res/color/nav_item_color.xml
+app/src/main/res/drawable/baseline_arrow_back_24.xml
+app/src/main/res/drawable/ic_launcher_background.xml
+app/src/main/res/drawable/ic_launcher_foreground.xml
+app/src/main/res/layout/activity_cliente_detalle.xml
+app/src/main/res/layout/activity_clientes.xml
+app/src/main/res/layout/activity_dashboard.xml
+app/src/main/res/layout/activity_servicios.xml
+app/src/main/res/layout/dialog_cliente.xml
+app/src/main/res/layout/dialog_nuevo_servicio.xml
+app/src/main/res/layout/item_cliente.xml
+app/src/main/res/layout/item_servicio.xml
+app/src/main/res/layout/item_spinner.xml
+app/src/main/res/menu/menu_bottom.xml
+app/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+app/src/main/res/mipmap-anydpi/ic_launcher.xml
+app/src/main/res/mipmap-hdpi/ic_launcher_round.webp
+app/src/main/res/mipmap-hdpi/ic_launcher.webp
+app/src/main/res/mipmap-mdpi/ic_launcher_round.webp
+app/src/main/res/mipmap-mdpi/ic_launcher.webp
+app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp
+app/src/main/res/mipmap-xhdpi/ic_launcher.webp
+app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp
+app/src/main/res/mipmap-xxhdpi/ic_launcher.webp
+app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+app/src/main/res/values-night/themes.xml
+app/src/main/res/values/colors.xml
+app/src/main/res/values/strings.xml
+app/src/main/res/values/styles.xml
+app/src/main/res/values/themes.xml
+app/src/main/res/xml/backup_rules.xml
+app/src/main/res/xml/data_extraction_rules.xml
+app/src/test/java/sv/edu/ues/vl23003/crudapp/ExampleUnitTest.java
+build.gradle.kts
+gradle.properties
+gradle/libs.versions.toml
+gradlew
+gradlew.bat
+settings.gradle.kts
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="app/src/main/res/color/nav_item_color.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/primary" />
+
+    <item android:color="@color/nav_no_seleccionado" />
+</resources>
+</file>
+
+<file path="app/src/main/res/layout/item_spinner.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:background="@color/surface"/>
+</file>
+
+<file path="app/.gitignore">
+/build
+</file>
+
+<file path="app/proguard-rules.pro">
+# Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
+
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
+</file>
+
+<file path="app/src/androidTest/java/sv/edu/ues/vl23003/crudapp/ExampleInstrumentedTest.java">
+package sv.edu.ues.vl23003.crudapp;
+
+import android.content.Context;
+
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static org.junit.Assert.*;
+
+/**
+ * Instrumented test, which will execute on an Android device.
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ */
+@RunWith(AndroidJUnit4.class)
+public class ExampleInstrumentedTest {
+    @Test
+    public void useAppContext() {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("sv.edu.ues.vl23003.crudapp", appContext.getPackageName());
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/adapter/ClienteAdapter.java">
+package sv.edu.ues.vl23003.crudapp.ui.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.ui.clientes.ClienteDetalleActivity;
+
+import java.util.List;
+
+public class ClienteAdapter extends RecyclerView.Adapter<ClienteAdapter.ViewHolder>{
+
+    List<ClienteEntity> lista;
+    Context context;
+
+    public ClienteAdapter(Context context, List<ClienteEntity> lista){
+        this.context = context;
+        this.lista = lista;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_cliente,parent,false);
+
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        ClienteEntity cliente = lista.get(position);
+
+        holder.txtNombre.setText(cliente.nombre);
+        holder.txtTelefono.setText(cliente.telefono);
+        holder.txtCorreo.setText(cliente.email);
+
+        holder.itemView.setOnClickListener(v -> {
+
+            Intent intent =
+                    new Intent(context,
+                            ClienteDetalleActivity.class);
+
+            intent.putExtra(
+                    "idCliente",
+                    cliente.id);
+
+            context.startActivity(intent);
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return lista.size();
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+
+        TextView txtNombre, txtTelefono, txtCorreo;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            txtNombre = itemView.findViewById(R.id.txtNombre);
+            txtTelefono = itemView.findViewById(R.id.txtTelefono);
+            txtCorreo = itemView.findViewById(R.id.txtCorreo);
+        }
+    }
+
+    public void actualizarLista(List<ClienteEntity> nuevaLista) {
+        this.lista = nuevaLista;
+        notifyDataSetChanged();
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/clientes/ClienteDetalleActivity.java">
+package sv.edu.ues.vl23003.crudapp.ui.clientes;
+
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.ImageButton;
+
+import android.app.AlertDialog;
+import android.widget.Button;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
+
+public class ClienteDetalleActivity extends AppCompatActivity {
+
+    TextView txtNombre;
+    TextView txtTelefono;
+    TextView txtCorreo;
+    TextView txtDireccion;
+    TextView txtMunicipio;
+    TextView txtNotas;
+    Button btnEditar;
+    Button btnEliminar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cliente_detalle);
+
+        ImageButton btnVolver = findViewById(R.id.btnVolver);
+
+        btnVolver.setOnClickListener(v -> finish());
+
+        txtNombre = findViewById(R.id.txtNombre);
+        txtTelefono = findViewById(R.id.txtTelefono);
+        txtCorreo = findViewById(R.id.txtCorreo);
+        txtDireccion = findViewById(R.id.txtDireccion);
+        txtMunicipio = findViewById(R.id.txtMunicipio);
+        txtNotas = findViewById(R.id.txtNotas);
+        btnEditar = findViewById(R.id.btnEditar);
+        btnEliminar = findViewById(R.id.btnEliminar);
+
+        int id =
+                getIntent().getIntExtra(
+                        "idCliente",
+                        0);
+
+        ClienteEntity clienteEntity =
+                AppDatabase.getDatabase(this)
+                        .clienteDao()
+                        .obtenerPorId(id);
+
+        if (clienteEntity != null) {
+
+            txtNombre.setText(clienteEntity.nombre);
+
+            txtTelefono.setText(clienteEntity.telefono);
+
+            txtCorreo.setText(clienteEntity.email);
+
+            btnEditar.setOnClickListener(v -> mostrarDialogoEditar(clienteEntity));
+
+            txtDireccion.setText(clienteEntity.direccion);
+
+            txtMunicipio.setText(clienteEntity.municipio);
+
+            txtNotas.setText(clienteEntity.notas);
+
+            btnEliminar.setOnClickListener(v -> {
+
+
+
+                new AlertDialog.Builder(this)
+                        .setTitle("Eliminar Cliente")
+                        .setMessage("¿Desea eliminar este cliente?")
+                        .setPositiveButton("Eliminar",(dialog,which)->{
+
+                            AppDatabase.getDatabase(this)
+                                    .clienteDao()
+                                    .eliminar(clienteEntity);
+                            Toast.makeText(
+                                    this,
+                                    "Cliente eliminado correctamente",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+
+                            finish();
+
+                        })
+                        .setNegativeButton("Cancelar",null)
+                        .show();
+            });
+        }
+    }
+    private void mostrarDialogoEditar(ClienteEntity cliente){
+
+        AlertDialog.Builder builder =
+                new AlertDialog.Builder(this);
+
+        View view =
+                getLayoutInflater()
+                        .inflate(R.layout.dialog_cliente,null);
+
+        builder.setView(view);
+
+        EditText edtNombre =
+                view.findViewById(R.id.edtNombre);
+
+        EditText edtTelefono =
+                view.findViewById(R.id.edtTelefono);
+
+        EditText edtCorreo =
+                view.findViewById(R.id.edtCorreo);
+
+        EditText edtDireccion =
+                view.findViewById(R.id.edtDireccion);
+
+        EditText edtMunicipio =
+                view.findViewById(R.id.edtMunicipio);
+
+        EditText edtNotas =
+                view.findViewById(R.id.edtNotas);
+
+        edtNombre.setText(cliente.nombre);
+        edtTelefono.setText(cliente.telefono);
+        edtCorreo.setText(cliente.email);
+        edtDireccion.setText(cliente.direccion);
+        edtMunicipio.setText(cliente.municipio);
+        edtNotas.setText(cliente.notas);
+
+        AlertDialog dialog = builder.create();
+
+        view.findViewById(R.id.btnGuardar)
+                .setOnClickListener(v -> {
+
+                    cliente.nombre =
+                            edtNombre.getText().toString();
+
+                    cliente.telefono =
+                            edtTelefono.getText().toString();
+
+                    cliente.email =
+                            edtCorreo.getText().toString();
+
+                    cliente.direccion =
+                            edtDireccion.getText().toString();
+
+                    cliente.municipio =
+                            edtMunicipio.getText().toString();
+
+                    cliente.notas =
+                            edtNotas.getText().toString();
+
+                    AppDatabase.getDatabase(this)
+                            .clienteDao()
+                            .actualizar(cliente);
+
+                    recreate();
+
+                    dialog.dismiss();
+                });
+
+        dialog.show();
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/dashboard/DashboardActivity.java">
+package sv.edu.ues.vl23003.crudapp.ui.dashboard;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
+import sv.edu.ues.vl23003.crudapp.ui.clientes.ClientesActivity;
+import sv.edu.ues.vl23003.crudapp.ui.servicios.ServiciosActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class DashboardActivity extends AppCompatActivity {
+
+    private AppDatabase db;
+    private TextView tvTotalClientes, tvTotalServicios, tvMontoTotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dashboard);
+
+        db = AppDatabase.getDatabase(this);
+
+        tvTotalClientes = findViewById(R.id.tv_total_clientes);
+        tvTotalServicios = findViewById(R.id.tv_total_servicios);
+        tvMontoTotal = findViewById(R.id.tv_monto_total);
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        bottomNavigation.setSelectedItemId(R.id.nav_home);
+
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_home) {
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_clientes) {
+                startActivity(new Intent(this, ClientesActivity.class));
+                finish();
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_servicios) {
+                startActivity(new Intent(this, ServiciosActivity.class));
+                finish();
+                return true;
+            }
+            return false;
+        });
+
+        cargarDatos();
+    }
+
+    private void cargarDatos() {
+        new Thread(() -> {
+            int totalClientes = db.clienteDao().getAll().size();
+            List<ServicioEntity> listaServicios = db.servicioDao().getAll();
+            int totalServicios = listaServicios.size();
+            double montoTotal = 0;
+            for (ServicioEntity s : listaServicios) {
+                montoTotal += s.getPrecio();
+            }
+
+            double finalMonto = montoTotal;
+            runOnUiThread(() -> {
+                tvTotalClientes.setText(String.valueOf(totalClientes));
+                tvTotalServicios.setText(String.valueOf(totalServicios));
+                tvMontoTotal.setText("$" + String.format("%.2f", finalMonto));
+            });
+        }).start();
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/servicios/ServicioAdapter.java">
+package sv.edu.ues.vl23003.crudapp.ui.servicios;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
+
+public class ServicioAdapter extends RecyclerView.Adapter<ServicioAdapter.ViewHolder> {
+
+    private List<ServicioEntity> servicios;
+    private List<ClienteEntity> clientes;
+    private OnDeleteClickListener onDeleteClickListener;
+
+    public interface OnDeleteClickListener {
+        void onDeleteClick(ServicioEntity servicio);
+    }
+
+    public ServicioAdapter(List<ServicioEntity> servicios, List<ClienteEntity> clientes, OnDeleteClickListener listener) {
+        this.servicios = servicios;
+        this.clientes = clientes;
+        this.onDeleteClickListener = listener;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_servicio, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        ServicioEntity servicio = servicios.get(position);
+
+        String nombreCliente = "";
+        for (ClienteEntity c : clientes) {
+            if (c.getId() == servicio.getClienteId()) {
+                nombreCliente = c.getNombre();
+                break;
+            }
+        }
+
+        holder.tvCliente.setText("Cliente: " + nombreCliente);
+        holder.tvTipo.setText("Tipo: " + servicio.getTipoServicio());
+        holder.tvEstado.setText("Estado: " + servicio.getEstado());
+        holder.tvPrecio.setText("Precio: $" + String.format("%.2f", servicio.getPrecio()));
+        holder.tvDescripcion.setText(servicio.getDescripcion());
+        holder.tvFecha.setText("Fecha: " + servicio.getFecha());
+
+        holder.btnEliminar.setOnClickListener(v -> onDeleteClickListener.onDeleteClick(servicio));
+    }
+
+    @Override
+    public int getItemCount() {
+        return servicios.size();
+    }
+
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tvCliente, tvTipo, tvEstado, tvPrecio, tvDescripcion, tvFecha;
+        Button btnEliminar;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            tvCliente = itemView.findViewById(R.id.tv_cliente);
+            tvTipo = itemView.findViewById(R.id.tv_tipo_servicio);
+            tvEstado = itemView.findViewById(R.id.tv_estado);
+            tvPrecio = itemView.findViewById(R.id.tv_precio);
+            tvDescripcion = itemView.findViewById(R.id.tv_descripcion);
+            tvFecha = itemView.findViewById(R.id.tv_fecha);
+            btnEliminar = itemView.findViewById(R.id.btn_eliminar);
+        }
+    }
+}
+</file>
+
+<file path="app/src/main/res/drawable/baseline_arrow_back_24.xml">
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true" android:height="24dp" android:tint="#000000" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+      
+    <path android:fillColor="@android:color/white" android:pathData="M20,11H7.83l5.59,-5.59L12,4l-8,8 8,8 1.41,-1.41L7.83,13H20v-2z"/>
+    
+</vector>
+</file>
+
+<file path="app/src/main/res/drawable/ic_launcher_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#3DDC84"
+        android:pathData="M0,0h108v108h-108z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,0L9,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,0L19,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M29,0L29,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M39,0L39,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M49,0L49,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M59,0L59,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M69,0L69,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M79,0L79,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M89,0L89,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M99,0L99,108"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,9L108,9"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,19L108,19"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,29L108,29"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,39L108,39"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,49L108,49"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,59L108,59"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,69L108,69"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,79L108,79"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,89L108,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,99L108,99"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,29L89,29"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,39L89,39"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,49L89,49"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,59L89,59"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,69L89,69"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M19,79L89,79"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M29,19L29,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M39,19L39,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M49,19L49,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M59,19L59,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M69,19L69,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M79,19L79,89"
+        android:strokeWidth="0.8"
+        android:strokeColor="#33FFFFFF" />
+</vector>
+</file>
+
+<file path="app/src/main/res/drawable/ic_launcher_foreground.xml">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="85.84757"
+                android:endY="92.4963"
+                android:startX="42.9492"
+                android:startY="49.59793"
+                android:type="linear">
+                <item
+                    android:color="#44000000"
+                    android:offset="0.0" />
+                <item
+                    android:color="#00000000"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="nonZero"
+        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+</vector>
+</file>
+
+<file path="app/src/main/res/layout/activity_cliente_detalle.xml">
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B132B">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#1C2541"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:tint="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Detalle Cliente"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TELÉFONO"
+                android:textColor="#9CA3AF"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CORREO"
+                android:textColor="#9CA3AF"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIRECCIÓN"
+                android:textColor="#9CA3AF"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MUNICIPIO"
+                android:textColor="#9CA3AF"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtMunicipio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOTAS"
+                android:textColor="#9CA3AF"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtNotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:text="Editar"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="16dp"
+                    android:text="Eliminar"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+</file>
+
+<file path="app/src/main/res/layout/activity_clientes.xml">
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary">
+
+    <!-- Toolbar -->
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Clientes"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- Buscar -->
+
+    <EditText
+        android:id="@+id/edtBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="12dp"
+        android:background="@color/card"
+        android:hint="Buscar cliente..."
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"/>
+
+    <TextView
+        android:id="@+id/txtSinClientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edtBuscar"
+        android:layout_marginTop="80dp"
+        android:text="No hay clientes registrados.\nToca + para agregar uno."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <!-- Recycler -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerClientes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edtBuscar"
+        android:layout_above="@id/bottomNavigation"
+        android:padding="6dp"/>
+
+    <!-- Botón flotante -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_margin="20dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/primary"/>
+
+    <!-- Bottom Navigation -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/card"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_bottom"/>
+
+</RelativeLayout>
+</file>
+
+<file path="app/src/main/res/layout/activity_dashboard.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:text="@string/dashboard_title"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.CrudApp.CardDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_clientes"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_clientes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.CrudApp.CardDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_servicios"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_servicios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.CrudApp.CardDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_monto_total"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_monto_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textColor="@color/green"
+                        android:textSize="36sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        style="@style/Widget.CrudApp.BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_bottom"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        />
+
+
+</LinearLayout>
+</file>
+
+<file path="app/src/main/res/layout/activity_servicios.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.servicios.ServiciosActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:title="Servicios"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_servicios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        style="@style/Widget.CrudApp.BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_bottom"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_agregar_servicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/primary"
+        app:elevation="6dp"
+        android:translationY="-72dp" />
+
+</LinearLayout>
+</file>
+
+<file path="app/src/main/res/layout/dialog_cliente.xml">
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#0B132B">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Cliente"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- NOMBRE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el nombre"/>
+
+        <!-- TELÉFONO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="TELÉFONO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el teléfono"/>
+
+        <!-- CORREO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CORREO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el correo"/>
+
+        <!-- DIRECCIÓN -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="DIRECCIÓN"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese la dirección"/>
+
+        <!-- MUNICIPIO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="MUNICIPIO"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtMunicipio"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese el municipio"/>
+
+        <!-- NOTAS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="NOTAS"
+            android:textColor="#9CA3AF"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/edtNotas"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            android:background="#1C2541"
+            android:gravity="top"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="12dp"
+            android:hint="Ingrese observaciones"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:text="Guardar Cliente"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
+</file>
+
+<file path="app/src/main/res/layout/dialog_nuevo_servicio.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de servicio"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_tipo_servicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:hint="Descripcion del servicio" />
+
+    </LinearLayout>
+
+</ScrollView>
+</file>
+
+<file path="app/src/main/res/layout/item_cliente.xml">
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#1C2541">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtTelefono"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtCorreo"
+            android:textColor="#BDBDBD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</file>
+
+<file path="app/src/main/res/layout/item_servicio.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:contentPadding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_tipo_servicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_estado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</file>
+
+<file path="app/src/main/res/menu/menu_bottom.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/menu_inicio"
+        android:icon="@android:drawable/ic_menu_view"/>
+
+    <item
+        android:id="@+id/nav_clientes"
+        android:title="@string/menu_clientes"
+        android:icon="@android:drawable/ic_menu_myplaces"/>
+
+    <item
+        android:id="@+id/nav_servicios"
+        android:title="@string/menu_servicios"
+        android:icon="@android:drawable/ic_menu_edit"/>
+
+</menu>
+</file>
+
+<file path="app/src/main/res/mipmap-anydpi/ic_launcher_round.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>
+</file>
+
+<file path="app/src/main/res/mipmap-anydpi/ic_launcher.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>
+</file>
+
+<file path="app/src/main/res/values-night/themes.xml">
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CrudApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
+</file>
+
+<file path="app/src/main/res/values/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.CrudApp.CardDashboard" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <style name="Widget.CrudApp.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/card</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+
+</resources>
+</file>
+
+<file path="app/src/main/res/xml/backup_rules.xml">
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample backup rules file; uncomment and customize as necessary.
+   See https://developer.android.com/guide/topics/data/autobackup
+   for details.
+   Note: This file is ignored for devices older than API 31
+   See https://developer.android.com/about/versions/12/backup-restore
+-->
+<full-backup-content>
+    <!--
+   <include domain="sharedpref" path="."/>
+   <exclude domain="sharedpref" path="device.xml"/>
+-->
+</full-backup-content>
+</file>
+
+<file path="app/src/main/res/xml/data_extraction_rules.xml">
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample data extraction rules file; uncomment and customize as necessary.
+   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   for details.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+        <include .../>
+        <exclude .../>
+        -->
+    </cloud-backup>
+    <!--
+    <device-transfer>
+        <include .../>
+        <exclude .../>
+    </device-transfer>
+    -->
+</data-extraction-rules>
+</file>
+
+<file path="app/src/test/java/sv/edu/ues/vl23003/crudapp/ExampleUnitTest.java">
+package sv.edu.ues.vl23003.crudapp;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ */
+public class ExampleUnitTest {
+    @Test
+    public void addition_isCorrect() {
+        assertEquals(4, 2 + 2);
+    }
+}
+</file>
+
+<file path="build.gradle.kts">
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+}
+</file>
+
+<file path="gradle/libs.versions.toml">
+[versions]
+agp = "8.13.2"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.1"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+</file>
+
+<file path="gradlew.bat">
+@rem
+@rem Copyright 2015 the original author or authors.
+@rem
+@rem Licensed under the Apache License, Version 2.0 (the "License");
+@rem you may not use this file except in compliance with the License.
+@rem You may obtain a copy of the License at
+@rem
+@rem      https://www.apache.org/licenses/LICENSE-2.0
+@rem
+@rem Unless required by applicable law or agreed to in writing, software
+@rem distributed under the License is distributed on an "AS IS" BASIS,
+@rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+@rem See the License for the specific language governing permissions and
+@rem limitations under the License.
+@rem
+@rem SPDX-License-Identifier: Apache-2.0
+@rem
+
+@if "%DEBUG%"=="" @echo off
+@rem ##########################################################################
+@rem
+@rem  Gradle startup script for Windows
+@rem
+@rem ##########################################################################
+
+@rem Set local scope for the variables with windows NT shell
+if "%OS%"=="Windows_NT" setlocal
+
+set DIRNAME=%~dp0
+if "%DIRNAME%"=="" set DIRNAME=.
+@rem This is normally unused
+set APP_BASE_NAME=%~n0
+set APP_HOME=%DIRNAME%
+
+@rem Resolve any "." and ".." in APP_HOME to make it shorter.
+for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
+
+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
+
+@rem Find java.exe
+if defined JAVA_HOME goto findJavaFromJavaHome
+
+set JAVA_EXE=java.exe
+%JAVA_EXE% -version >NUL 2>&1
+if %ERRORLEVEL% equ 0 goto execute
+
+echo. 1>&2
+echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2
+echo. 1>&2
+echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+echo location of your Java installation. 1>&2
+
+goto fail
+
+:findJavaFromJavaHome
+set JAVA_HOME=%JAVA_HOME:"=%
+set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+
+if exist "%JAVA_EXE%" goto execute
+
+echo. 1>&2
+echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME% 1>&2
+echo. 1>&2
+echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+echo location of your Java installation. 1>&2
+
+goto fail
+
+:execute
+@rem Setup the command line
+
+set CLASSPATH=
+
+
+@rem Execute Gradle
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" -jar "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" %*
+
+:end
+@rem End local scope for the variables with windows NT shell
+if %ERRORLEVEL% equ 0 goto mainEnd
+
+:fail
+rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+rem the _cmd.exe /c_ return code!
+set EXIT_CODE=%ERRORLEVEL%
+if %EXIT_CODE% equ 0 set EXIT_CODE=1
+if not ""=="%GRADLE_EXIT_CONSOLE%" exit %EXIT_CODE%
+exit /b %EXIT_CODE%
+
+:mainEnd
+if "%OS%"=="Windows_NT" endlocal
+
+:omega
+</file>
+
+<file path="settings.gradle.kts">
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "CrudApp"
+include(":app")
+</file>
+
+<file path=".gitignore">
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+wrapper/
+caches/
+daemon/
+native/
+android/
+</file>
+
+<file path="app/build.gradle.kts">
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace = "sv.edu.ues.vl23003.crudapp"
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "sv.edu.ues.vl23003.crudapp"
+        minSdk = 26
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+
+    val room_version = "2.8.4"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+
+}
+</file>
+
+<file path="app/src/main/AndroidManifest.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CrudApp">
+        <activity
+            android:name=".ui.clientes.ClienteDetalleActivity"/>
+        <activity
+            android:name=".ui.clientes.ClientesActivity" />
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.servicios.ServiciosActivity" />
+    </application>
+
+</manifest>
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/ClienteEntity.java">
+package sv.edu.ues.vl23003.crudapp.data.local.entity;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "clientes")
+public class ClienteEntity {
+    @PrimaryKey(autoGenerate = true)
+    public int id;
+    public String nombre;
+    public String telefono;
+    public String email;
+    public String direccion;
+    public String municipio;
+    public String notas;
+
+    public ClienteEntity() {}
+
+    public ClienteEntity(String nombre, String direccion, String telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/dao/ClienteDao.java">
+package sv.edu.ues.vl23003.crudapp.data.local.entity.dao;
+
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+import androidx.room.Delete;
+
+import java.util.List;
+
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+
+@Dao
+public interface ClienteDao {
+    @Insert
+    void insert(ClienteEntity cliente);
+
+    @Insert
+    void insertar(ClienteEntity cliente);
+
+    @Update
+    void actualizar(ClienteEntity cliente);
+
+    @Delete
+    void eliminar(ClienteEntity cliente);
+
+    @Query("SELECT * FROM clientes")
+    List<ClienteEntity> getAll();
+
+    @Query("SELECT * FROM clientes")
+    List<ClienteEntity> obtenerClientes();
+
+    @Query("SELECT * FROM clientes WHERE id = :id")
+    ClienteEntity getById(int id);
+
+    @Query("SELECT * FROM clientes WHERE id = :id")
+    ClienteEntity obtenerPorId(int id);
+
+    @Query("SELECT * FROM clientes WHERE nombre LIKE '%' || :texto || '%'")
+    List<ClienteEntity> buscarCliente(String texto);
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/dao/ServicioDao.java">
+package sv.edu.ues.vl23003.crudapp.data.local.entity.dao;
+
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+
+import java.util.List;
+
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
+
+@Dao
+public interface ServicioDao {
+    @Insert
+    void insert(ServicioEntity servicio);
+
+    @Query("SELECT * FROM servicios")
+    List<ServicioEntity> getAll();
+
+    @Query("SELECT * FROM servicios WHERE id = :id")
+    ServicioEntity getById(int id);
+
+    @Delete
+    void delete(ServicioEntity servicio);
+
+    @Query("DELETE FROM servicios WHERE id = :id")
+    void deleteById(int id);
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/database/AppDatabase.java">
+package sv.edu.ues.vl23003.crudapp.data.local.entity.database;
+
+import android.content.Context;
+
+import androidx.annotation.NonNull;
+import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.dao.ClienteDao;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.dao.ServicioDao;
+
+
+@Database(entities = {ClienteEntity.class, ServicioEntity.class}, version = 2, exportSchema = false)
+public abstract class AppDatabase extends RoomDatabase {
+    private static volatile AppDatabase INSTANCE;
+
+    public abstract ClienteDao clienteDao();
+
+    public abstract ServicioDao servicioDao();
+
+    public static AppDatabase getDatabase(final Context context) {
+        if (INSTANCE == null) {
+            synchronized (AppDatabase.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = Room.databaseBuilder(
+                                    context.getApplicationContext(),
+                                    AppDatabase.class,
+                                    "clientes_db"
+                            )
+                            .fallbackToDestructiveMigration(true)
+                            .allowMainThreadQueries()
+                            .addCallback(SEED_CALLBACK)
+                            .build();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    private static final RoomDatabase.Callback SEED_CALLBACK = new RoomDatabase.Callback() {
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+            super.onCreate(db);
+            db.execSQL("INSERT INTO clientes (nombre, direccion, telefono) VALUES ('Juan Perez', 'San Salvador', '7777-1234')");
+        }
+    };
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/data/local/entity/ServicioEntity.java">
+package sv.edu.ues.vl23003.crudapp.data.local.entity;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "servicios")
+public class ServicioEntity {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+    private int clienteId;
+    private String tipoServicio;
+    private String estado;
+    private double precio;
+    private String descripcion;
+    private String fecha;
+
+    public ServicioEntity(int clienteId, String tipoServicio, String estado, double precio, String descripcion, String fecha) {
+        this.clienteId = clienteId;
+        this.tipoServicio = tipoServicio;
+        this.estado = estado;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getClienteId() {
+        return clienteId;
+    }
+
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
+
+    public String getTipoServicio() {
+        return tipoServicio;
+    }
+
+    public void setTipoServicio(String tipoServicio) {
+        this.tipoServicio = tipoServicio;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/clientes/ClientesActivity.java">
+package sv.edu.ues.vl23003.crudapp.ui.clientes;
+
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Patterns;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.ui.adapter.ClienteAdapter;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
+import sv.edu.ues.vl23003.crudapp.ui.dashboard.DashboardActivity;
+import sv.edu.ues.vl23003.crudapp.ui.servicios.ServiciosActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
+
+public class ClientesActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerClientes;
+    private ImageButton btnVolver;
+    private ImageButton btnAgregar;
+
+    private TextView txtSinClientes;
+    private AppDatabase db;
+    private EditText edtBuscar;
+
+    private ClienteAdapter adapter;
+
+    private void buscarClientes(String texto){
+        List<ClienteEntity> lista =
+                db.clienteDao().buscarCliente(texto);
+
+
+        if (adapter != null) {
+            adapter.actualizarLista(lista);
+        }
+
+        if(lista.isEmpty()){
+            txtSinClientes.setText("No se encontraron clientes.");
+            txtSinClientes.setVisibility(View.VISIBLE);
+        }else{
+            txtSinClientes.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_clientes);
+
+        recyclerClientes = findViewById(R.id.recyclerClientes);
+        btnAgregar = findViewById(R.id.btnAgregar);
+        btnVolver = findViewById(R.id.btnVolver);
+        edtBuscar = findViewById(R.id.edtBuscar);
+        txtSinClientes = findViewById(R.id.txtSinClientes);
+
+        db = AppDatabase.getDatabase(this);
+
+        BottomNavigationView bottomNavigation =
+                findViewById(R.id.bottomNavigation);
+
+        bottomNavigation.setSelectedItemId(R.id.nav_clientes);
+
+        bottomNavigation.setOnItemSelectedListener(item -> {
+
+            if(item.getItemId() == R.id.nav_clientes){
+                return true;
+            }
+
+            if(item.getItemId() == R.id.nav_home){
+
+                startActivity(
+                        new Intent(this, DashboardActivity.class));
+
+                finish();
+
+                return true;
+            }
+
+            if(item.getItemId() == R.id.nav_servicios){
+
+                startActivity(
+                        new Intent(this, ServiciosActivity.class));
+
+                finish();
+
+                return true;
+            }
+
+            return false;
+        });
+
+        recyclerClientes.setLayoutManager(
+                new LinearLayoutManager(this));
+
+        cargarClientes();
+
+        edtBuscar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                buscarClientes(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        btnVolver.setOnClickListener(v -> {
+
+            Intent intent =
+                    new Intent(ClientesActivity.this,
+                            DashboardActivity.class);
+
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            startActivity(intent);
+
+            finish();
+        });
+
+        btnAgregar.setOnClickListener(v -> mostrarDialogo());
+    }
+
+    public void cargarClientes() {
+        List<ClienteEntity> lista =
+                db.clienteDao().obtenerClientes();
+
+
+        if (adapter == null) {
+            adapter = new ClienteAdapter(this, lista);
+            recyclerClientes.setAdapter(adapter);
+        } else {
+
+            adapter.actualizarLista(lista);
+        }
+
+        if(lista.isEmpty()){
+            txtSinClientes.setVisibility(View.VISIBLE);
+            recyclerClientes.setVisibility(View.GONE);
+        }else{
+            txtSinClientes.setVisibility(View.GONE);
+            recyclerClientes.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void mostrarDialogo() {
+
+        AlertDialog.Builder builder =
+                new AlertDialog.Builder(this);
+
+        View view =
+                getLayoutInflater().inflate(
+                        R.layout.dialog_cliente,
+                        null);
+
+        builder.setView(view);
+
+        EditText edtNombre = view.findViewById(R.id.edtNombre);
+        EditText edtTelefono = view.findViewById(R.id.edtTelefono);
+        EditText edtCorreo = view.findViewById(R.id.edtCorreo);
+        EditText edtDireccion = view.findViewById(R.id.edtDireccion);
+        EditText edtMunicipio = view.findViewById(R.id.edtMunicipio);
+        EditText edtNotas = view.findViewById(R.id.edtNotas);
+
+        AlertDialog dialog = builder.create();
+
+        view.findViewById(R.id.btnGuardar)
+                .setOnClickListener(v -> {
+
+                    String nombre = edtNombre.getText().toString().trim();
+                    String telefono = edtTelefono.getText().toString().trim();
+                    String correo = edtCorreo.getText().toString().trim();
+                    String direccion = edtDireccion.getText().toString().trim();
+                    String municipio = edtMunicipio.getText().toString().trim();
+
+                    if(nombre.isEmpty()){
+                        edtNombre.setError("Ingrese el nombre");
+                        return;
+                    }
+
+                    if(telefono.isEmpty()){
+                        edtTelefono.setError("Ingrese teléfono");
+                        return;
+                    }
+
+                    if(!telefono.matches("[0-9]{8}")){
+                        edtTelefono.setError("Debe contener 8 dígitos");
+                        return;
+                    }
+
+                    if(correo.isEmpty()){
+                        edtCorreo.setError("Ingrese correo");
+                        return;
+                    }
+
+                    if(!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
+                        edtCorreo.setError("Correo inválido");
+                        return;
+                    }
+
+                    if(direccion.isEmpty()){
+                        edtDireccion.setError("Ingrese dirección");
+                        return;
+                    }
+
+                    if(municipio.isEmpty()){
+                        edtMunicipio.setError("Ingrese municipio");
+                        return;
+                    }
+
+                    ClienteEntity clienteEntity = new ClienteEntity();
+
+                    clienteEntity.nombre = nombre;
+                    clienteEntity.telefono = telefono;
+                    clienteEntity.email = correo;
+                    clienteEntity.direccion = direccion;
+                    clienteEntity.municipio = municipio;
+                    clienteEntity.notas = edtNotas.getText().toString().trim();
+
+                    db.clienteDao().insertar(clienteEntity);
+
+                    Toast.makeText(
+                            this,
+                            "Cliente agregado correctamente",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    cargarClientes();
+
+                    dialog.dismiss();
+                });
+
+        dialog.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarClientes();
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/ui/servicios/ServiciosActivity.java">
+package sv.edu.ues.vl23003.crudapp.ui.servicios;
+
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import sv.edu.ues.vl23003.crudapp.R;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ClienteEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.ServicioEntity;
+import sv.edu.ues.vl23003.crudapp.data.local.entity.database.AppDatabase;
+import sv.edu.ues.vl23003.crudapp.ui.clientes.ClientesActivity;
+import sv.edu.ues.vl23003.crudapp.ui.dashboard.DashboardActivity;
+import sv.edu.ues.vl23003.crudapp.utils.Constantes;
+
+public class ServiciosActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private AppDatabase db;
+    private List<ClienteEntity> clientes;
+    private List<ServicioEntity> servicios;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_servicios);
+
+        db = AppDatabase.getDatabase(this);
+
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        toolbar.setNavigationOnClickListener(v -> {
+            startActivity(new Intent(this, DashboardActivity.class));
+            finish();
+        });
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        bottomNavigation.setSelectedItemId(R.id.nav_servicios);
+
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_servicios) {
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_home) {
+                startActivity(new Intent(this, DashboardActivity.class));
+                finish();
+                return true;
+            }
+            if (item.getItemId() == R.id.nav_clientes) {
+                startActivity(new Intent(this, ClientesActivity.class));
+                finish();
+                return true;
+            }
+            return false;
+        });
+
+        recyclerView = findViewById(R.id.recycler_servicios);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        FloatingActionButton fabAgregar = findViewById(R.id.fab_agregar_servicio);
+        fabAgregar.setOnClickListener(v -> mostrarDialogoNuevoServicio());
+
+        cargarServicios();
+    }
+
+    private void cargarServicios() {
+        new Thread(() -> {
+            servicios = db.servicioDao().getAll();
+            clientes = db.clienteDao().getAll();
+            runOnUiThread(() -> {
+                ServicioAdapter adapter = new ServicioAdapter(servicios, clientes, this::eliminarServicio);
+                recyclerView.setAdapter(adapter);
+            });
+        }).start();
+    }
+
+    private void mostrarDialogoNuevoServicio() {
+        new Thread(() -> {
+            List<ClienteEntity> clientesCargados = db.clienteDao().getAll();
+
+            if (clientesCargados.isEmpty()) {
+                runOnUiThread(() ->
+                    Toast.makeText(this, "No hay clientes registrados. Registre un cliente primero.", Toast.LENGTH_LONG).show()
+                );
+                return;
+            }
+
+            runOnUiThread(() -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                View view = LayoutInflater.from(this).inflate(R.layout.dialog_nuevo_servicio, null);
+                builder.setView(view);
+                builder.setTitle("Nuevo Servicio");
+                builder.setPositiveButton("Guardar", null);
+                builder.setNegativeButton("Cancelar", null);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+                Spinner spCliente = view.findViewById(R.id.spinner_cliente);
+                Spinner spTipo = view.findViewById(R.id.spinner_tipo_servicio);
+                Spinner spEstado = view.findViewById(R.id.spinner_estado);
+                EditText etPrecio = view.findViewById(R.id.et_precio);
+                EditText etDescripcion = view.findViewById(R.id.et_descripcion);
+
+                String[] nombresClientes = new String[clientesCargados.size()];
+                for (int i = 0; i < clientesCargados.size(); i++) {
+                    nombresClientes[i] = clientesCargados.get(i).getNombre();
+                }
+
+
+                ArrayAdapter<String> adapterClientes = new ArrayAdapter<>(this, R.layout.item_spinner, nombresClientes);
+                adapterClientes.setDropDownViewResource(R.layout.item_spinner);
+                spCliente.setAdapter(adapterClientes);
+
+                ArrayAdapter<String> adapterTipos = new ArrayAdapter<>(this, R.layout.item_spinner, Constantes.TIPOS_SERVICIO);
+                adapterTipos.setDropDownViewResource(R.layout.item_spinner);
+                spTipo.setAdapter(adapterTipos);
+
+                ArrayAdapter<String> adapterEstados = new ArrayAdapter<>(this, R.layout.item_spinner, Constantes.ESTADOS);
+                adapterEstados.setDropDownViewResource(R.layout.item_spinner);
+                spEstado.setAdapter(adapterEstados);
+
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+                    String precioStr = etPrecio.getText().toString().trim();
+                    if (precioStr.isEmpty()) {
+                        etPrecio.setError("Ingrese un precio");
+                        return;
+                    }
+
+                    int selectedClienteIndex = spCliente.getSelectedItemPosition();
+                    int clienteId = clientesCargados.get(selectedClienteIndex).getId();
+                    String tipo = spTipo.getSelectedItem().toString();
+                    String estado = spEstado.getSelectedItem().toString();
+                    double precio = Double.parseDouble(precioStr);
+                    String descripcion = etDescripcion.getText().toString().trim();
+                    String fecha = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+
+                    ServicioEntity servicio = new ServicioEntity(clienteId, tipo, estado, precio, descripcion, fecha);
+
+                    new Thread(() -> {
+                        db.servicioDao().insert(servicio);
+                        runOnUiThread(() -> {
+                            cargarServicios();
+                            dialog.dismiss();
+                            Toast.makeText(this, "Servicio registrado", Toast.LENGTH_SHORT).show();
+                        });
+                    }).start();
+                });
+            });
+        }).start();
+    }
+
+    private void eliminarServicio(ServicioEntity servicio) {
+        if (servicio.getEstado().equals("En proceso")) {
+            Toast.makeText(this, "No se puede eliminar un servicio en proceso", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        new Thread(() -> {
+            db.servicioDao().delete(servicio);
+            runOnUiThread(() -> {
+                cargarServicios();
+                Toast.makeText(this, "Servicio eliminado", Toast.LENGTH_SHORT).show();
+            });
+        }).start();
+    }
+}
+</file>
+
+<file path="app/src/main/java/sv/edu/ues/vl23003/crudapp/utils/Constantes.java">
+package sv.edu.ues.vl23003.crudapp.utils;
+
+public final class Constantes {
+
+    private Constantes() {
+    }
+
+    public static final String DB_NAME = "clientes_db";
+    public static final String TABLA_CLIENTES = "clientes";
+    public static final String TABLA_SERVICIOS = "servicios";
+    public static final String EXTRA_ID_CLIENTE = "idCliente";
+    public static final String EXTRA_ID_SERVICIO = "idServicio";
+
+    public static final String[] ESTADOS = {"Pendiente", "En proceso", "Completado", "Cancelado"};
+    public static final String[] TIPOS_SERVICIO = {"Mantenimiento", "Reparacion", "Instalacion", "Consultoria", "Otro"};
+}
+</file>
+
+<file path="app/src/main/res/values/colors.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1DA1F2</color>          <color name="primary_variant">#0D8BDB</color>
+    <color name="secondary">#0B132B</color>        <color name="secondary_variant">#1A1F3A</color>
+    <color name="background">#0B132B</color>       <color name="card">#1C2541</color>             <color name="surface">#1C2541</color>          <color name="texto_principal">#FFFFFF</color>   <color name="texto_secundario">#94A3B8</color>  <color name="nav_no_seleccionado">#64748B</color> <color name="white">#FFFFFF</color>
+    <color name="green">#00E676</color>
+    <color name="error">#CF6679</color>
+    <color name="gray">#94A3B8</color>
+</resources>
+</file>
+
+<file path="app/src/main/res/values/strings.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CrudApp</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_clientes">Clientes</string>
+    <string name="menu_servicios">Servicios</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_clientes">Clientes</string>
+    <string name="dashboard_servicios">Servicios</string>
+    <string name="dashboard_monto_total">Monto Total</string>
+</resources>
+</file>
+
+<file path="app/src/main/res/values/themes.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.CrudApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+
+        <item name="colorSurface">@color/surface</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorError">@color/error</item>
+
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">@color/card</item>
+    </style>
+
+    <style name="Theme.CrudApp" parent="Base.Theme.CrudApp" />
+
+</resources>
+</file>
+
+<file path="gradle.properties">
+# Project-wide Gradle settings.
+# IDE (e.g. Android Studio) users:
+# Gradle settings configured through the IDE *will override*
+# any settings specified in this file.
+# For more details on how to configure your build environment visit
+# http://www.gradle.org/docs/current/userguide/build_environment.html
+# Specifies the JVM arguments used for the daemon process.
+# The setting is particularly useful for tweaking memory settings.
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+
+# LINEA COMENTADA PARA SOLUCIONAR EL ERROR EN WINDOWS:
+# org.gradle.java.home=/usr/lib/jvm/java-17-openjdk
+
+# When configured, Gradle will run in incubating parallel mode.
+# This option should only be used with decoupled projects. For more details, visit
+# https://developer.android.com/r/tools/gradle-multi-project-decoupled-projects
+# org.gradle.parallel=true
+# AndroidX package structure to make it clearer which packages are bundled with the
+# Android operating system, and which are packaged with your app's APK
+# https://developer.android.com/topic/libraries/support-library/androidx-rn
+android.useAndroidX=true
+# Enables namespacing of each library's R class so that its R class includes only the
+# resources declared in the library itself and none from the library's dependencies,
+# thereby reducing the size of the R class for that library
+android.nonTransitiveRClass=true
+</file>
+
+<file path="gradlew">
+#!/bin/sh
+
+#
+# Copyright © 2015 the original authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+##############################################################################
+#
+#   Gradle start up script for POSIX generated by Gradle.
+#
+#   Important for running:
+#
+#   (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
+#       noncompliant, but you have some other compliant shell such as ksh or
+#       bash, then to run this script, type that shell name before the whole
+#       command line, like:
+#
+#           ksh Gradle
+#
+#       Busybox and similar reduced shells will NOT work, because this script
+#       requires all of these POSIX shell features:
+#         * functions;
+#         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
+#           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
+#         * compound commands having a testable exit status, especially «case»;
+#         * various built-in commands including «command», «set», and «ulimit».
+#
+#   Important for patching:
+#
+#   (2) This script targets any POSIX shell, so it avoids extensions provided
+#       by Bash, Ksh, etc; in particular arrays are avoided.
+#
+#       The "traditional" practice of packing multiple parameters into a
+#       space-separated string is a well documented source of bugs and security
+#       problems, so this is (mostly) avoided, by progressively accumulating
+#       options in "$@", and eventually passing that to Java.
+#
+#       Where the inherited environment variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
+#       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
+#       see the in-line comments for details.
+#
+#       There are tweaks for specific operating systems such as AIX, CygWin,
+#       Darwin, MinGW, and NonStop.
+#
+#   (3) This script is generated from the Groovy template
+#       https://github.com/gradle/gradle/blob/HEAD/platforms/jvm/plugins-application/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
+#       within the Gradle project.
+#
+#       You can find Gradle at https://github.com/gradle/gradle/.
+#
+##############################################################################
+
+# Attempt to set APP_HOME
+
+# Resolve links: $0 may be a link
+app_path=$0
+
+# Need this for daisy-chained symlinks.
+while
+    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
+    [ -h "$app_path" ]
+do
+    ls=$( ls -ld "$app_path" )
+    link=${ls#*' -> '}
+    case $link in             #(
+      /*)   app_path=$link ;; #(
+      *)    app_path=$APP_HOME$link ;;
+    esac
+done
+
+# This is normally unused
+# shellcheck disable=SC2034
+APP_BASE_NAME=${0##*/}
+# Discard cd standard output in case $CDPATH is set (https://github.com/gradle/gradle/issues/25036)
+APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s\n' "$PWD" ) || exit
+
+# Use the maximum available, or set MAX_FD != -1 to use that value.
+MAX_FD=maximum
+
+warn () {
+    echo "$*"
+} >&2
+
+die () {
+    echo
+    echo "$*"
+    echo
+    exit 1
+} >&2
+
+# OS specific support (must be 'true' or 'false').
+cygwin=false
+msys=false
+darwin=false
+nonstop=false
+case "$( uname )" in                #(
+  CYGWIN* )         cygwin=true  ;; #(
+  Darwin* )         darwin=true  ;; #(
+  MSYS* | MINGW* )  msys=true    ;; #(
+  NONSTOP* )        nonstop=true ;;
+esac
+
+CLASSPATH="\\\"\\\""
+
+
+# Determine the Java command to use to start the JVM.
+if [ -n "$JAVA_HOME" ] ; then
+    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
+        # IBM's JDK on AIX uses strange locations for the executables
+        JAVACMD=$JAVA_HOME/jre/sh/java
+    else
+        JAVACMD=$JAVA_HOME/bin/java
+    fi
+    if [ ! -x "$JAVACMD" ] ; then
+        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+    fi
+else
+    JAVACMD=java
+    if ! command -v java >/dev/null 2>&1
+    then
+        die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+    fi
+fi
+
+# Increase the maximum file descriptors if we can.
+if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
+    case $MAX_FD in #(
+      max*)
+        # In POSIX sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
+        # shellcheck disable=SC2039,SC3045
+        MAX_FD=$( ulimit -H -n ) ||
+            warn "Could not query maximum file descriptor limit"
+    esac
+    case $MAX_FD in  #(
+      '' | soft) :;; #(
+      *)
+        # In POSIX sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
+        # shellcheck disable=SC2039,SC3045
+        ulimit -n "$MAX_FD" ||
+            warn "Could not set maximum file descriptor limit to $MAX_FD"
+    esac
+fi
+
+# Collect all arguments for the java command, stacking in reverse order:
+#   * args from the command line
+#   * the main class name
+#   * -classpath
+#   * -D...appname settings
+#   * --module-path (only if needed)
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables.
+
+# For Cygwin or MSYS, switch paths to Windows format before running java
+if "$cygwin" || "$msys" ; then
+    APP_HOME=$( cygpath --path --mixed "$APP_HOME" )
+    CLASSPATH=$( cygpath --path --mixed "$CLASSPATH" )
+
+    JAVACMD=$( cygpath --unix "$JAVACMD" )
+
+    # Now convert the arguments - kludge to limit ourselves to /bin/sh
+    for arg do
+        if
+            case $arg in                                #(
+              -*)   false ;;                            # don't mess with options #(
+              /?*)  t=${arg#/} t=/${t%%/*}              # looks like a POSIX filepath
+                    [ -e "$t" ] ;;                      #(
+              *)    false ;;
+            esac
+        then
+            arg=$( cygpath --path --ignore --mixed "$arg" )
+        fi
+        # Roll the args list around exactly as many times as the number of
+        # args, so each arg winds up back in the position where it started, but
+        # possibly modified.
+        #
+        # NB: a `for` loop captures its iteration list before it begins, so
+        # changing the positional parameters here affects neither the number of
+        # iterations, nor the values presented in `arg`.
+        shift                   # remove old arg
+        set -- "$@" "$arg"      # push replacement arg
+    done
+fi
+
+
+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+
+# Collect all arguments for the java command:
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,
+#     and any embedded shellness will be escaped.
+#   * For example: A user cannot expect ${Hostname} to be expanded, as it is an environment variable and will be
+#     treated as '${Hostname}' itself on the command line.
+
+set -- \
+        "-Dorg.gradle.appname=$APP_BASE_NAME" \
+        -classpath "$CLASSPATH" \
+        -jar "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
+        "$@"
+
+# Stop when "xargs" is not available.
+if ! command -v xargs >/dev/null 2>&1
+then
+    die "xargs is not available"
+fi
+
+# Use "xargs" to parse quoted args.
+#
+# With -n1 it outputs one arg per line, with the quotes and backslashes removed.
+#
+# In Bash we could simply go:
+#
+#   readarray ARGS < <( xargs -n1 <<<"$var" ) &&
+#   set -- "${ARGS[@]}" "$@"
+#
+# but POSIX shell has neither arrays nor command substitution, so instead we
+# post-process each arg (as a line of input to sed) to backslash-escape any
+# character that might be a shell metacharacter, then use eval to reverse
+# that process (while maintaining the separation between arguments), and wrap
+# the whole thing up as a single "set" statement.
+#
+# This will of course break if any of these variables contains a newline or
+# an unmatched quote.
+#
+
+eval "set -- $(
+        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
+        xargs -n1 |
+        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
+        tr '\n' ' '
+    )" '"$@"'
+
+exec "$JAVACMD" "$@"
+</file>
+
+</files>

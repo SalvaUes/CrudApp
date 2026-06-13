@@ -37,19 +37,19 @@ public class ClientesActivity extends AppCompatActivity {
     private AppDatabase db;
     private EditText edtBuscar;
 
-    private void buscarClientes(String texto){
+    private ClienteAdapter adapter;
 
+    private void buscarClientes(String texto){
         List<ClienteEntity> lista =
                 db.clienteDao().buscarCliente(texto);
 
-        ClienteAdapter adapter =
-                new ClienteAdapter(this, lista);
 
-        recyclerClientes.setAdapter(adapter);
+        if (adapter != null) {
+            adapter.actualizarLista(lista);
+        }
 
         if(lista.isEmpty()){
-            txtSinClientes.setText(
-                    "No se encontraron clientes.");
+            txtSinClientes.setText("No se encontraron clientes.");
             txtSinClientes.setVisibility(View.VISIBLE);
         }else{
             txtSinClientes.setVisibility(View.GONE);
@@ -138,14 +138,17 @@ public class ClientesActivity extends AppCompatActivity {
     }
 
     public void cargarClientes() {
-
         List<ClienteEntity> lista =
                 db.clienteDao().obtenerClientes();
 
-        ClienteAdapter adapter =
-                new ClienteAdapter(this, lista);
 
-        recyclerClientes.setAdapter(adapter);
+        if (adapter == null) {
+            adapter = new ClienteAdapter(this, lista);
+            recyclerClientes.setAdapter(adapter);
+        } else {
+
+            adapter.actualizarLista(lista);
+        }
 
         if(lista.isEmpty()){
             txtSinClientes.setVisibility(View.VISIBLE);

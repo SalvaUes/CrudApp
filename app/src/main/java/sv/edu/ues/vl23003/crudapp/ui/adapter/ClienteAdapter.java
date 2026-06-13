@@ -76,4 +76,9 @@ public class ClienteAdapter extends RecyclerView.Adapter<ClienteAdapter.ViewHold
             txtCorreo = itemView.findViewById(R.id.txtCorreo);
         }
     }
+
+    public void actualizarLista(List<ClienteEntity> nuevaLista) {
+        this.lista = nuevaLista;
+        notifyDataSetChanged();
+    }
 }
