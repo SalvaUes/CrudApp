@@ -73,23 +73,18 @@ public class ClientesActivity extends AppCompatActivity {
 
         bottomNavigation.setSelectedItemId(R.id.nav_clientes);
 
+        // CONTROLADOR DE NAVEGACIÓN CORREGIDO (Sin duplicados)
         bottomNavigation.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
 
-            if(item.getItemId() == R.id.nav_clientes){
-                return true;
-            }
-
-            if(item.getItemId() == R.id.nav_home){
-
-                startActivity(
-                        new Intent(this, DashboardActivity.class));
-
+            if (id == R.id.nav_clientes) {
+                return true; // Nos quedamos en clientes de forma segura
+            } else {
+                // Cualquier otro botón (incluido el de Servicios o Home) regresa a tu Dashboard principal
+                startActivity(new Intent(this, DashboardActivity.class));
                 finish();
-
                 return true;
             }
-
-            return false;
         });
 
         recyclerClientes.setLayoutManager(
